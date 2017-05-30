@@ -1,5 +1,6 @@
 var path = require('path');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
 module.exports = {
   entry: './app/index.ts',
@@ -23,6 +24,11 @@ module.exports = {
         test: /\.tsx?$/,
         exclude: /node_modules/,
         use: ['babel-loader', 'ts-loader'],
+      },
+      {
+        test: /\.html?$/,
+        exclude: /node_modules/,
+        use: ['file-loader?name=[name].[ext]']
       }
     ]
   },
@@ -30,7 +36,13 @@ module.exports = {
     extensions: [".tsx", ".ts", ".js", ".css", ".scss"]
   },
   plugins: [
-      new ExtractTextPlugin('styles.css'),
+    new ExtractTextPlugin('styles.css'),
+    new BrowserSyncPlugin({
+      // browse to http://localhost:3000/ during development,
+      host: 'localhost',
+      port: 3000,
+      server: { baseDir: ['dist'] }
+    })
   ],
   devtool: "source-map"
 };
