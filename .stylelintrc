@@ -1,0 +1,24 @@
+{
+  "rules": {
+    "block-closing-brace-newline-before": "always-multi-line",
+    "block-closing-brace-space-before": "always-single-line",
+    "block-opening-brace-newline-after": "always-multi-line",
+    "block-opening-brace-space-after": "always-single-line",
+    "block-opening-brace-space-before": "always",
+    "color-hex-case": "lower",
+    "color-no-invalid-hex": true,
+    "declaration-bang-space-before": "always",
+    "declaration-block-semicolon-newline-after": "always",
+    "declaration-block-trailing-semicolon": "always",
+    "indentation": 2,
+    "number-leading-zero": "never",
+    "length-zero-no-unit": true,
+    "selector-list-comma-newline-after": "always",
+    "selector-list-comma-space-before": "never",
+    "selector-pseudo-class-case": "lower",
+    "selector-pseudo-element-case": "lower",
+    "selector-type-case": "lower",
+    "string-quotes": "double",
+    "unit-case": "lower"
+  }
+}
